@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #8360c3, #2ebf91);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #1f1f1f; /* Dark text for global body */
+  text-align: center;
+}
+
+/* ===== Universal Container for Forms and Sections ===== */
+.form-container, .section {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  animation: fadeInUp 1s ease;
+  color: #212121; /* Slightly lighter than pure black */
+}
+
+/* ===== Headings ===== */
+h1, .form-title, .section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #111111; /* Dark heading */
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Forms and Input Styling ===== */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #121212; /* Darker text in input fields */
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.input-group input:focus {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.input-group label {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  color: #444444; /* Muted dark grey label */
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -10px;
+  left: 5px;
+  font-size: 0.75rem;
+  color: #2c3e50; /* Dark blue-gray on focus */
+}
+
+/* ===== Buttons ===== */
+button, .btn {
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #2ebf91, #8360c3);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover, .btn:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+/* ===== Link Footer ===== */
+.form-footer, footer .link {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #222; /* Dark grey footer */
+}
+
+.form-footer a, footer .link {
+  color: #2b2b2b;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.form-footer a:hover, footer .link:hover {
+  color: #000000;
+}
+
+/* ===== Button Group for index.jsp ===== */
+.button-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
